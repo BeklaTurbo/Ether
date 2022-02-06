@@ -1,0 +1,14 @@
+ pragma solidity ^0.8.10;
+ contract mySender { 
+   
+    function multyTx(address[2] memory _addrs) public payable{
+        
+         for(uint256 i = 0; i < _addrs.length; i++) {
+
+              _addrs[i].transfer(msg.value); 
+              
+              } 
+            } 
+ }
+
+    
