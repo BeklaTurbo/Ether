@@ -6,3 +6,14 @@ contract SendEther {
     }
 
 }
+//каким образом в ремиксе после деплоя контракта отдать этой функции 2 адреса и 2 значение с количеством эфира? 
+// pragma solidity 0.4.24;
+// contract mySender { 
+
+//    function multyTx(address[2] addrs, uint[2] values) public {
+        
+//         for(uint256 i = 0; i < addrs.length; i++) {
+//              addrs[i].transfer(values[i]); 
+//              } 
+//            } 
+// }
