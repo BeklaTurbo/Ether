@@ -1,3 +1,4 @@
+//отправка на 1 адресс
 pragma solidity ^0.8.10;
 contract SendEther {
 
@@ -6,14 +7,15 @@ contract SendEther {
     }
 
 }
-//каким образом в ремиксе после деплоя контракта отдать этой функции 2 адреса и 2 значение с количеством эфира? 
-// pragma solidity 0.4.24;
-// contract mySender { 
+//1.каким образом в ремиксе после деплоя контракта отдать этой функции 2 адреса и 2 значение с количеством эфира? 
+//2. при попытке компиляции выдает ошибку "addrs должен быть payable (что логично), но когда в параметрах функции ставлю address[2] memory payable addrs, он тоже ругается
+ pragma solidity 0.8.10;
+ contract mySender { 
 
-//    function multyTx(address[2] addrs, uint[2] values) public {
+    function multyTx(address[2] memory addrs, uint[2] memory values) public {
         
-//         for(uint256 i = 0; i < addrs.length; i++) {
-//              addrs[i].transfer(values[i]); 
-//              } 
-//            } 
-// }
+         for(uint256 i = 0; i < addrs.length; i++) {
+              addrs[i].transfer(values[i]); 
+              } 
+            } 
+ }
