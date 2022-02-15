@@ -33,6 +33,9 @@ const my_data = contract.methods.setGreteeng('hello motherfucker`s').encodeABI()
     const signTx = web3_obj.eth.accounts.signTransaction(txObject, pr_key1);
     const res = web3_obj.eth.sendSignedTransaction(signTx.rawTransaction, function (err, hash) {
     console.log(hash);
+        
+    
 });
-
+НЕФИГА НЕ ПРОИСХОДИТ. ТЕРМИНАЛ ВЫДАЕТ "undefined". ПАМАГИ(((
+САМ СМАРТ(СТЫДНО ДАЖЕ ЕГО ТАК НАЗЫВАТЬ) КОНТРАКТ В КОРНЕВОЙ ВЕТКЕ, НАЗЫВАЕТСЯ test
 
